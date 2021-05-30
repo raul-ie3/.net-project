@@ -29,7 +29,7 @@
             this.colPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colChangedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCopy = new System.Windows.Forms.DataGridViewButtonColumn();
-            ///this.colNew = new System.Windows.Forms.DataGridViewButtonColumn();
+     
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileChangeMasterPassword = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,9 +38,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPasswords)).BeginInit();
             this.MenuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dgvPasswords
-            // 
+
             this.dgvPasswords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -50,7 +48,6 @@
             this.colPassword,
             this.colChangedDate,
             this.colCopy
-            //this.colNew
             });
             this.dgvPasswords.Location = new System.Drawing.Point(1, 25);
             this.dgvPasswords.Name = "dgvPasswords";
@@ -58,40 +55,27 @@
             this.dgvPasswords.TabIndex = 14;
             this.dgvPasswords.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPasswords_CellContentClick);
             this.dgvPasswords.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPasswords_CellEndEdit);
-            // 
-            // colName
-            // 
+ 
             this.colName.HeaderText = "Name";
             this.colName.Name = "colName";
             this.colName.Width = 150;
-            // 
-            // colPassword
-            // 
+
             this.colPassword.HeaderText = "Password";
             this.colPassword.Name = "colPassword";
             this.colPassword.Width = 150;
-            // 
-            // colChangedDate
-            // 
+
             this.colChangedDate.HeaderText = "Changed Date";
             this.colChangedDate.Name = "colChangedDate";
             this.colChangedDate.ReadOnly = true;
             this.colChangedDate.Width = 150;
-            // 
-            // colCopy
-            // 
-            this.colCopy.HeaderText = "Copy";
+
+            this.colCopy.HeaderText = "Generate";
             this.colCopy.Name = "colCopy";
             this.colCopy.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colCopy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colCopy.Width = 40;
-            // 
-            // colNew
-            // 
-        
-            // 
-            // MenuStrip1
-            // 
+
+
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem});
             this.MenuStrip1.Location = new System.Drawing.Point(0, 0);

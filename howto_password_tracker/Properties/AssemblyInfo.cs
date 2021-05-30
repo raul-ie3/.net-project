@@ -8,9 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("PasswordTracker")]
 [assembly: AssemblyDescription("Stores encrypted passwords")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("C# Helper")]
 [assembly: AssemblyProduct("PasswordTracker")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

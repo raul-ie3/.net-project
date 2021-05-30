@@ -22,7 +22,6 @@ namespace howto_password_tracker
 
         private const int COL_PASSWORD = 1;
         private const int COL_COPY = 3;
-        private const int COL_NEW = 4;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -200,22 +199,11 @@ namespace howto_password_tracker
         {
             if (e.ColumnIndex == COL_COPY)
             {
-                // Copy to clipboard.
-                Clipboard.Clear();
-                Clipboard.SetText(dgvPasswords.Rows[e.RowIndex].Cells[1].Value.ToString());
-                System.Media.SystemSounds.Beep.Play();
-            }
-            else if (e.ColumnIndex == COL_NEW)
-            {
-                // Make a new password.
-                frmNewPassword frm = new frmNewPassword();
-                if (dgvPasswords.Rows[e.RowIndex].Cells[1].Value != null)
-                    frm.txtPassword.Text = dgvPasswords.Rows[e.RowIndex].Cells[1].Value.ToString();
-                if (frm.ShowDialog() == DialogResult.OK)
-                {
-                    dgvPasswords.Rows[e.RowIndex].Cells["colPassword"].Value = frm.txtPassword.Text;
-                    dgvPasswords.Rows[e.RowIndex].Cells["colChangedDate"].Value = DateTime.Now.ToString();
-                }
+                RestClient rClient = new RestClient();
+                string generated_password = rClient.getPassword();
+
+                dgvPasswords.Rows[e.RowIndex].Cells["colPassword"].Value = generated_password;
+                dgvPasswords.Rows[e.RowIndex].Cells["colChangedDate"].Value = DateTime.Now.ToString();
             }
         }
 
